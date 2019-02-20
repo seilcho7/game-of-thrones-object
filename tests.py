@@ -1,4 +1,5 @@
 from character import Character
+from character import Hero
 
 # Characters can be instantiated with name and avatar
 
@@ -26,3 +27,5 @@ print(arya.greet(jon))
 # "Hello, I am Arya Stark. I am awesome."
 print(arya.greet())
 
+# I should be able to create a Hero instance
+bronn = Hero("Bronn of the Blackwater", "bron.png")
