@@ -33,10 +33,20 @@ class Character():
 # Hero inherits from Character
 # Character is the super class of Hero
 class Hero(Character):
-    pass
+    def greet(self, someone=None):
+        if someone is not None:
+            return "I am %s, I don't like monsters like you, %s, get ready to die." % (self.name, someone.name)
+            
+        else:
+            return "I am %s, I will kill all the monsters." % (self.name,)
 
 # Monster is kind of Character
 # Monster is a subclass of Character
 # Monster inherits from Character
 class Monster(Character):
-    pass
+    def greet(self, someone=None):
+        if someone is not None:
+            return "I am %s, I will kill you %s." % (self.name, someone.name)
+            
+        else:
+            return "I am %s, I will kill you all" % (self.name,)

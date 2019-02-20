@@ -34,3 +34,10 @@ bronn = Hero("Bronn of the Blackwater", "bron.png")
 # Hero should be able to greet Character
 print(bronn.greet(arya))
 print(jon.greet(bronn))
+
+# I should be able to create a Monster instance
+puppy = Monster("Puppy the Black Dragon", "puppy.png")
+
+# Monster should be able to greet Hero
+print(puppy.greet(bronn))
+print(bronn.greet(puppy))
