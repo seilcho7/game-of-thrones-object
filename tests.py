@@ -1,5 +1,6 @@
 from character import Character
 from character import Hero
+from character import Monster
 
 # Characters can be instantiated with name and avatar
 
