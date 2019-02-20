@@ -1,6 +1,7 @@
 from character import Character
 from character import Hero
 from character import Monster
+from character import MinorHero
 
 # Characters can be instantiated with name and avatar
 
@@ -36,8 +37,18 @@ print(bronn.greet(arya))
 print(jon.greet(bronn))
 
 # I should be able to create a Monster instance
-puppy = Monster("Puppy the Black Dragon", "puppy.png")
+pinky = Monster()
 
 # Monster should be able to greet Hero
-print(puppy.greet(bronn))
-print(bronn.greet(puppy))
+print(pinky.greet(bronn))
+print(bronn.greet(pinky))
+
+# Expect Bronn to say "EEEEEEEK!"
+# when encountering a monster
+print(bronn.greet(pinky))
+print(bronn.greet(jon))
+
+print("###########")
+
+ralph = MinorHero()
+print(ralph.greet(bronn))

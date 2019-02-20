@@ -28,25 +28,44 @@ class Character():
         else:
             return "Hello, I am %s. I am awesome." % (self.name,)
 
+
+# Monster is kind of Character
+# Monster is a subclass of Character
+# Monster inherits from Character
+class Monster(Character):
+    def __init__(self):
+        pass
+
+    def greet(self, someone=None):
+        return "ugggghhhh"
+    # def greet(self, someone=None):
+    #     if someone is not None:
+    #         return "I am %s, I will kill you %s." % (self.name, someone.name)
+            
+    #     else:
+    #         return "I am %s, I will kill you all" % (self.name,)
+
 # Hero is a kind of Character
 # Hero is a subclass of Character
 # Hero inherits from Character
 # Character is the super class of Hero
 class Hero(Character):
     def greet(self, someone=None):
-        if someone is not None:
-            return "I am %s, I don't like monsters like you, %s, get ready to die." % (self.name, someone.name)
-            
+        if type(someone) == Monster:
+            return "EEEEEK!"
         else:
-            return "I am %s, I will kill all the monsters." % (self.name,)
+            return super().greet(someone)
+        
+        # if someone is not None:
+        #     return "I am %s, I don't like monsters like you, %s, get ready to die." % (self.name, someone.name)
+            
+        # else:
+        #     return "I am %s, I will kill all the monsters." % (self.name,)
 
-# Monster is kind of Character
-# Monster is a subclass of Character
-# Monster inherits from Character
-class Monster(Character):
+class MinorHero(Hero):
+    def __init__(self):
+        pass
+
     def greet(self, someone=None):
-        if someone is not None:
-            return "I am %s, I will kill you %s." % (self.name, someone.name)
-            
-        else:
-            return "I am %s, I will kill you all" % (self.name,)
+        # return "Yeah. I'm just an extra."
+        return Character.greet(someone)
