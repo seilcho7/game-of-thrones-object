@@ -14,5 +14,12 @@ class Character():
         self.avatar = new_avatar
         self.inventory = []
     
-    def greet(self, someone):
-        return "Hello, %s, I am %s. I am awesome." % (someone.name, self.name,)
+    # 'someone=None' is default argument
+    # 'None' is equivalent to 'null' in other languages
+    def greet(self, someone=None):
+        if someone is not None:
+        # if someone:
+            return "Hello, %s, I am %s. I am awesome." % (someone.name, self.name,)
+            
+        else:
+            return "Hello, I am %s. I am awesome." % (self.name,)
